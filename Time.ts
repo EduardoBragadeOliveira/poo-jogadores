@@ -38,5 +38,18 @@ export class Time{
     set jogadores(jogadores:Jogador[]){
         this._jogadores = jogadores;
     }
-    
+
+    adicionarJogador(jogador:Jogador){
+        this._jogadores.push(jogador)
+    }
+
+    removerJogador(jogador:Jogador){
+        let index = this._jogadores.indexOf(jogador);
+        if (index >= 0) {
+            this._jogadores.splice(index, 1);
+        }
+    }
+
+
+
 }
