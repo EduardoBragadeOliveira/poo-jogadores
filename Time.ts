@@ -1,10 +1,12 @@
 import { Jogador } from "./Jogador";
+import { Torneio } from "./Torneio";
 
 export class Time {
     private _nome: string
     private _qtdTitulos: number
     private _tier: number
     private _jogadores: Jogador[]
+    private _torneioParticipante: Torneio[]
 
     constructor(nome: string, qtdTitulos: number, tier: number, jogadores: Jogador[]) {
         this._nome = nome
