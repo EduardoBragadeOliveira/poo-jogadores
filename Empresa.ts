@@ -69,7 +69,7 @@ export class Empresa{
 
     inscricaoTorneio(time: Time, torneio: Torneio): void{
         if(torneio.times.indexOf(time) < 0){
-            if(torneio.capacidadeMaximaDeTimes < torneio.times.length){
+            if(torneio.capacidadeMaximaDeTimes > torneio.times.length){
                 if(time.jogadores.length >= 5){
                     if(time.tier == torneio.tier){
                         torneio.times.push(time);

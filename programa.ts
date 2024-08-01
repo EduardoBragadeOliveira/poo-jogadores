@@ -30,19 +30,18 @@ pain.adicionarJogador(kuri);
 
 keyd.adicionarJogador(xkflayz);
 
-
 let msi = new Torneio('MSI', 1000, 1, new Date('2024-07-31'), new Date('2024-08-31'), 5, []);
 
 let gigabyte = new Organizadora('GigaByte', [msi]);
 
 let riot = new Empresa('Riot', [], new Date('2009-01-01'), '11.111.111/1111-11', [gigabyte]);
 
-riot.inscricaoTorneio(pain, msi);
 riot.verTorneiosEmAndamento()
-
-
-
-// console.log(xkflayz);
-// console.log(xkflayz.times);
-// console.log(pain);
-// console.log(cariok);
+console.log("Jogadores da Pain")
+console.log(pain.jogadores)
+console.log("Tentativa de inscrição no torneio")
+riot.inscricaoTorneio(pain, msi);
+console.log("Jogadores da Keyd")
+console.log(keyd.jogadores)
+console.log("Tentativa de inscrição no torneio")
+riot.inscricaoTorneio(keyd, msi);

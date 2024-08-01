@@ -6,13 +6,14 @@ export class Time {
     private _qtdTitulos: number
     private _tier: number
     private _jogadores: Jogador[]
-    private _torneioParticipante: Torneio[]
+    private _torneiosParticipante: Torneio[]
 
     constructor(nome: string, qtdTitulos: number, tier: number, jogadores: Jogador[]) {
         this._nome = nome
         this._qtdTitulos = qtdTitulos
         this._tier = tier
         this._jogadores = jogadores
+        this._torneiosParticipante = []
     }
 
     get nome(): string {
@@ -55,16 +56,16 @@ export class Time {
     }
 
     get torneiosParticipante(): Torneio[] {
-        return this._torneioParticipante;
+        return this._torneiosParticipante;
     }
 
     AdicionarTorneiosParticipante(torneioParticipante: Torneio) {
-        this._torneioParticipante.push(torneioParticipante);
+        this._torneiosParticipante.push(torneioParticipante);
     }
     RemoverTorneiosParticipante(torneioParticipante: Torneio) {
-        let index = this._torneioParticipante.indexOf(torneioParticipante);
+        let index = this._torneiosParticipante.indexOf(torneioParticipante);
         if (index >= 0) {
-            this._torneioParticipante.splice(index, 1);
+            this._torneiosParticipante.splice(index, 1);
         }
     }
 
