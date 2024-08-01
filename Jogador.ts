@@ -6,15 +6,15 @@ export class Jogador{
     private _elo: string
     private _nivel: number
     private _dataRegistro: Date
-    private _times: Time[]
+    private _time: Time
     private _campeoes: Campeao[]
 
-    constructor(nick: string, elo: string, nivel: number, dataRegistro: Date, times: Time[], campeoes: Campeao[]) {
+    constructor(nick: string, elo: string, nivel: number, dataRegistro: Date, time: Time, campeoes: Campeao[]) {
         this._nick = nick;
         this._elo = elo;
         this._nivel = nivel;
         this._dataRegistro = dataRegistro
-        this._times = times
+        this._time = time
         this._campeoes = campeoes
     }
 
@@ -50,19 +50,12 @@ export class Jogador{
         this._dataRegistro = dataRegistro;
     }
 
-    get times(): Time[] {
-        return this._times;
+    get time(): Time {
+        return this._time;
     }
 
-    adicionarTime(time: Time) {
-        this._times.push(time);
-    }
-
-    removerTime(time: Time) {
-        let index = this._times.indexOf(time);
-        if (index >= 0) {
-            this._times.splice(index, 1);
-        }
+    set time(time: Time) {
+        this._time = time;
     }
 
     get campeoes(): Campeao[] {
