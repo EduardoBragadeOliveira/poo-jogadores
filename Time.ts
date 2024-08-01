@@ -53,4 +53,19 @@ export class Time {
             this._jogadores.splice(index, 1);
         }
     }
+
+    get torneiosParticipante(): Torneio[] {
+        return this._torneioParticipante;
+    }
+
+    AdicionarTorneiosParticipante(torneiosParticipante):Torneio[] {
+        this._torneioParticipante.push(torneiosParticipante);
+    }
+    RemoverTorneiosParticipante(torneiosParticipante):Torneio[] {
+        let index = this._torneioParticipante.indexOf(torneiosParticipante);
+        if (index >= 0) {
+            this._torneioParticipante.splice(index, 1);
+        }
+    }
+
 }
