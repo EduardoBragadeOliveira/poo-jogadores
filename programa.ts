@@ -1,6 +1,6 @@
 import { Campeao } from "./Campeao";
 import { Time } from "./Time";
-import { Jogador } from "./jogador";
+import { Jogador } from "./Jogador";
 import { Funcionario } from "./Funcionario";
 import { Empresa } from "./Empresa";
 import { Torneio } from "./Torneio";
@@ -16,7 +16,16 @@ let pain  = new Time('Pain Gaming', 4, 1, [cariok]);
 
 let xkflayz = new Jogador('xkflayz', 'Prata', 380, new Date("2020-01-01"), [pain], [tryndamere]);
 
-console.log(xkflayz);
-console.log(xkflayz.times);
-console.log(pain);
-console.log(cariok);
+let msi = new Torneio('MSI', 1000, 1, new Date('2024-07-31'), new Date('2024-08-31'), 5, [pain]);
+
+let gigabyte = new Organizadora('GigaByte', [msi]);
+
+let riot = new Empresa('Riot', [], new Date('2009-01-01'), '11.111.111/1111-11', [gigabyte]);
+
+riot.verTorneiosEmAndamento()
+riot.inscricaoTorneio(pain, msi);
+
+// console.log(xkflayz);
+// console.log(xkflayz.times);
+// console.log(pain);
+// console.log(cariok);

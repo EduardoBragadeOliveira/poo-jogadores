@@ -2,9 +2,11 @@ import { Torneio } from "./Torneio";
 
 export class Organizadora {
     private _nome: string;
+    public torneios: Torneio[];
 
-    constructor(nome: string) {
+    constructor(nome: string, torneios: Torneio[]) {
         this._nome = nome;
+        this.torneios = torneios;
     }
 
     get nome(): string {
@@ -16,13 +18,13 @@ export class Organizadora {
     }
 
     adicionarTorneio(torneio: Torneio) {
-        this._torneio.push(torneio);
+        this.torneios.push(torneio);
     }
 
     removerTorneio(torneio: Torneio) {
-        let index = this._torneio.indexOf(torneio);
+        let index = this.torneios.indexOf(torneio);
         if (index >= 0) {
-            this._torneio.splice(index, 1);
+            this.torneios.splice(index, 1);
         }
     }
 }

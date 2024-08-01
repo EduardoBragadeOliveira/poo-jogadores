@@ -2,7 +2,6 @@ import { Time } from "./Time";
 
 export class Torneio{
 private _nome:string
-private _organizadora: Organizadora
 private _premiacao: number
 private _tier:number
 private _dataComeco: Date
@@ -10,9 +9,8 @@ private _dataFim: Date
 private _capacidadeMaximaDeTimes: number
 private _times: Time[]
 
-constructor(nome:string, organizadora: Organizadora, premiacao: number, tier:number, dataComeco: Date, dataFim: Date, capacidadeMaximaDeTimes: number, times: Time[]){
+constructor(nome:string, premiacao: number, tier:number, dataComeco: Date, dataFim: Date, capacidadeMaximaDeTimes: number, times: Time[]){
     this._nome = nome;
-    this._organizadora = organizadora;
     this._premiacao= premiacao
     this._tier= tier
     this._dataComeco= dataComeco
@@ -26,13 +24,6 @@ constructor(nome:string, organizadora: Organizadora, premiacao: number, tier:num
 
     set nome(nome: string) {
         this._nome = nome;
-    }
-    get organizadora(): Organizadora{
-        return this._organizadora;
-    }
-    
-    set organizadora(organizadora: Organizadora){
-        this._organizadora = organizadora;
     }
 
     get premiacao(): number {
