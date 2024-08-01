@@ -58,11 +58,11 @@ export class Time {
         return this._torneioParticipante;
     }
 
-    AdicionarTorneiosParticipante(torneiosParticipante):Torneio[] {
-        this._torneioParticipante.push(torneiosParticipante);
+    AdicionarTorneiosParticipante(torneioParticipante: Torneio) {
+        this._torneioParticipante.push(torneioParticipante);
     }
-    RemoverTorneiosParticipante(torneiosParticipante):Torneio[] {
-        let index = this._torneioParticipante.indexOf(torneiosParticipante);
+    RemoverTorneiosParticipante(torneioParticipante: Torneio) {
+        let index = this._torneioParticipante.indexOf(torneioParticipante);
         if (index >= 0) {
             this._torneioParticipante.splice(index, 1);
         }
