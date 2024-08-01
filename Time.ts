@@ -1,4 +1,4 @@
-import { Jogador } from "./jogador";
+import { Jogador } from "./Jogador";
 
 export class Time {
     private _nome: string
