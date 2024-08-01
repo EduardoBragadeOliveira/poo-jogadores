@@ -1,6 +1,10 @@
 import { Campeao } from "./Campeao";
 import { Time } from "./Time";
 import { Jogador } from "./jogador";
+import { Funcionario } from "./Funcionario";
+import { Empresa } from "./Empresa";
+import { Torneio } from "./Torneio";
+import { Organizadora } from "./Organizadora";
 
 let rell = new Campeao('Rell', 'Jungle', 150);
 let zyra = new Campeao('Zyra', 'Jungle', 170);
