@@ -1,6 +1,6 @@
 import { Campeao } from "./Campeao";
 import { Time } from "./Time";
-import { Jogador } from "./jogador";
+import { Jogador } from "./Jogador";
 import { Funcionario } from "./Funcionario";
 import { Empresa } from "./Empresa";
 import { Torneio } from "./Torneio";
