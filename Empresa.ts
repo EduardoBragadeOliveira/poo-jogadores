@@ -72,8 +72,9 @@ export class Empresa{
             if(torneio.capacidadeMaximaDeTimes > torneio.times.length){
                 if(time.jogadores.length >= 5){
                     if(time.tier == torneio.tier){
+                        console.log(time);
                         torneio.times.push(time);
-                        time.AdicionarTorneiosParticipante(torneio);
+                        // time.AdicionarTorneiosParticipante(torneio);
                         console.log("Inscrição efetuada com sucesso!") 
                     } else {
                         console.log("O tier do seu time está diferente do campeonato");
