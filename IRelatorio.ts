@@ -1,5 +1,5 @@
-export interface IRelatorio {
-   _dataRelatorio: Date;
+export interface IRelatorio<T> {
+   _dataRelatorio: T;
   
     imprimirRelatorio(): void;
   }
