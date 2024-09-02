@@ -1,75 +1,37 @@
+import { Pessoa } from "./Pessoa";
 import { Campeao } from "./Campeao";
-import { Time } from "./Time";
 
-export class Jogador{
-    private _nick: string
-    private _elo: string
-    private _nivel: number
-    private _dataRegistro: Date
-    private _time: Time
-    private _campeoes: Campeao[]
-
-    constructor(nick: string, elo: string, nivel: number, dataRegistro: Date, time: Time, campeoes: Campeao[]) {
-        this._nick = nick;
+export class Jogador extends Pessoa{
+    private _posicao: string;
+    private _elo: string;
+    private _campeoes: Campeao[];
+    
+    constructor(nome: string, idade: number, cpf:number, nickname:string, posicao: string, elo: string, campeoes: Campeao[]){
+        super(nome, idade, cpf, nickname);
+        this._posicao = posicao;
         this._elo = elo;
-        this._nivel = nivel;
-        this._dataRegistro = dataRegistro
-        this._time = time
-        this._campeoes = campeoes
+        this._campeoes = campeoes;
+    }
+    
+    get posicao() : string {
+        return this._posicao;
+    }
+    set posicao(posicao : string) {
+        this._posicao = posicao;
     }
 
-    get nick(): string {
-        return this.nick;
-    }
-
-    set nick(nick: string) {
-        this._nick = nick;
-    }
-
-    get elo(): string {
+    get elo() : string {
         return this._elo;
     }
-
-    set elo(elo: string) {
+    set elo(elo : string) {    
         this._elo = elo;
     }
-    
-    get nivel(): number {
-        return this.nivel;
-    }
-    
-    set nivel(nivel: number) {
-        this._nivel = nivel;
-    }
 
-    get dataRegistro(): Date {
-        return this._dataRegistro;
-    }
-
-    set dataRegistro(dataRegistro: Date) {
-        this._dataRegistro = dataRegistro;
-    }
-
-    get time(): Time {
-        return this._time;
-    }
-
-    set time(time: Time) {
-        this._time = time;
-    }
-
-    get campeoes(): Campeao[] {
+    get campeoes() : Campeao[] {
         return this._campeoes;
     }
-
-    adicionarCampeoes(campeao: Campeao) {
-        this._campeoes.push(campeao);
+    set campeoes(campeoes : Campeao[]) {
+        this._campeoes = campeoes;
     }
-
-    removerCampeoes(campeao: Campeao) {
-        let index = this._campeoes.indexOf(campeao);
-        if (index >= 0) {
-            this._campeoes.splice(index, 1);
-        }
-    }
+    
 }
